@@ -19,13 +19,14 @@ public class Juego {
         iniciarBestias();
         bienvenida();
         iniciarJuego();
+        System.out.println("Presione ENTER para SALIR");
 
 
     }
 
     public void iniciarJuego(){
         String ganador ="";
-        System.out.println("\n\nVAMOS A EMPEZAR CON LAS PELEAS");
+        System.out.println("\nVAMOS A EMPEZAR CON LAS PELEAS");
         System.out.println("Quien Ganara?");
         System.out.println("ENTER para continuar");
         teclado.nextLine();
@@ -41,7 +42,7 @@ public class Juego {
 
         }
 
-        System.out.println("El ejercito ganador es " +ganador);
+        //System.out.println("El ejercito ganador es " +ganador);
 
     }
 
@@ -59,7 +60,8 @@ public class Juego {
         System.out.println("Presentando a nuestros HEROES \n\n");
         presentarHeroes();
         System.out.println("ENTER para continuar");
-        System.out.println("Presentando a las bestias\n\n");
+        teclado.nextLine();
+        System.out.println("\n\nPresentando a las bestias\n\n");
         presentarBestias();
     }
 
@@ -141,12 +143,11 @@ public class Juego {
     //Metodo que nos sirve para la pelea, aqui se llaman a otros metodos que se explicaran
 
     public void pelea(Heroes heroe, Bestias bestia){
-        System.out.println("\n\n"
-                + "");
+        System.out.println("\n");
         boolean hayGanador = false;
         int contador =1; //var contador para llevar un conteo de los ciclos
         int ataquePot = especialidadAtaque(heroe, bestia); //aqui almaceno si el ataque del heroe va a estar potenciado segun el metodo
-        System.out.println("\n\n");
+        System.out.println("\n");
         System.out.println("Heroe: "+ heroe.getNombre()+" vida: " +heroe.getVida());
         System.out.println("Contra \nBestia: " +bestia.getNombre()+ " vida: " +bestia.getVida());
 
@@ -159,8 +160,8 @@ public class Juego {
                 int ataqueHeroe = calcularPotenciaOfensiva((heroe.getAtaqueTurno()+ataquePot), bestia.getArmaduraTurno());
                 //System.out.println("Ataque del heroe especialidad "+ataqueHeroe);
                 int ataqueBestia = calcularPotenciaOfensiva(bestia.getAtaqueTurno(),heroe.getArmaduraTurno());
-                System.out.println("Ataque heroe: " +heroe.getNombre()+" "+ataqueHeroe);
-                System.out.println("Ataque Bestia: "+bestia.getNombre()+" "+ataqueBestia);
+                System.out.println("Ataque heroe: " +heroe.getNombre()+"= "+ataqueHeroe);
+                System.out.println("Ataque Bestia: "+bestia.getNombre()+"= "+ataqueBestia);
                 System.out.println("\n");
 
 
