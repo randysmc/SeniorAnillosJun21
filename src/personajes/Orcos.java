@@ -1,6 +1,4 @@
-
 package src.personajes;
-
 
 public class Orcos extends Bestias{
 

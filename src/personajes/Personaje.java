@@ -1,4 +1,4 @@
-import src.personajes.*;
+package src.personajes;
 
 public class Personaje {
 
@@ -8,6 +8,7 @@ public class Personaje {
     protected int armadura;
     protected int dados;
     protected boolean esHeroe;
+    protected int ganados;
 
     public Personaje(String nombre, int vida, int ataque, int armadura, int dados, boolean esHeroe) {
         this.nombre = nombre;
@@ -18,9 +19,19 @@ public class Personaje {
         this.esHeroe = esHeroe;
     }
 
+    public int getGanados() {
+        return ganados;
+    }
+
+    public void setGanados(int ganados) {
+        this.ganados = ganados;
+    }
+
+
+
     @Override
     public String toString() {
-        return "Personaje" + "nombre=" + nombre + ", vida=" + vida + ", ataque=" + ataque + ", armadura=" + armadura + ", dados=" + dados + ", esHeroe=" + esHeroe;
+        return "Personaje " + "nombre= " + nombre + ", vida= " + vida + ", ataque= " + ataque + ", armadura= " + armadura + ", dados= " + dados + ", esHeroe=" + esHeroe;
     }
 
 

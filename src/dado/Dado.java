@@ -1,7 +1,4 @@
-
-package dado;
-
-
+package src.dado;
 
 public class Dado {
 
@@ -9,7 +6,6 @@ public class Dado {
     public Dado(){
 
     }
-
 
     public static int tirarDado(int valorMenor, int valorMayor, int cantidadDados ){
         int dado = valorMenor;

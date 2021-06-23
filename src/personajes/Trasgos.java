@@ -1,6 +1,4 @@
 package src.personajes;
-import src.dado.*
-
 
 public class Trasgos extends Bestias {
 
